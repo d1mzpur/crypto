@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Multi Chart Binance</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://unpkg.com/lightweight-charts@4.2.0/dist/lightweight-charts.standalone.production.js"></script>
+  </head>
+  <body>
+    <main class="app">
+      <header>
+        <h1>Binance Multi Chart</h1>
+        <p>Lihat beberapa chart crypto sekaligus dari API Binance.</p>
+      </header>
+
+      <section class="controls" aria-label="Kontrol chart">
+        <label>
+          Pair
+          <input id="symbol" type="text" value="BTCUSDT" placeholder="Contoh: BTCUSDT" />
+        </label>
+
+        <label>
+          Interval
+          <select id="interval">
+            <option value="1m">1m</option>
+            <option value="5m">5m</option>
+            <option value="15m">15m</option>
+            <option value="1h" selected>1h</option>
+            <option value="4h">4h</option>
+            <option value="1d">1d</option>
+          </select>
+        </label>
+
+        <label>
+          Jenis Chart
+          <select id="chartType">
+            <option value="candlestick">Candlestick</option>
+            <option value="line">Line</option>
+            <option value="area">Area</option>
+            <option value="baseline">Baseline</option>
+          </select>
+        </label>
+
+        <label>
+          Data
+          <select id="limit">
+            <option value="100">100</option>
+            <option value="200" selected>200</option>
+            <option value="300">300</option>
+            <option value="500">500</option>
+          </select>
+        </label>
+
+        <button id="addChart" type="button">Tambah Chart</button>
+      </section>
+
+      <section id="status" class="status" aria-live="polite"></section>
+
+      <section id="charts" class="chart-grid" aria-label="Daftar chart"></section>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>
