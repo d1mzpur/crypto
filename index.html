@@ -345,6 +345,212 @@
       gap: 1rem;
     }
 
+    .calendar-section {
+      margin-top: 1.2rem;
+      background: linear-gradient(155deg, #fffdf9, #fff6ea 56%, #fff3e2);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 1rem;
+      box-shadow: var(--shadow);
+    }
+
+    .calendar-top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0.8rem;
+      flex-wrap: wrap;
+    }
+
+    .calendar-top h2 {
+      margin: 0;
+      font-size: 1rem;
+      letter-spacing: 0.01em;
+      color: #5f4a36;
+    }
+
+    .calendar-sub {
+      margin: 0.3rem 0 0;
+      color: var(--muted);
+      font-size: 0.87rem;
+    }
+
+    .calendar-count {
+      border-radius: 999px;
+      padding: 0.34rem 0.74rem;
+      font-size: 0.75rem;
+      font-weight: 800;
+      letter-spacing: 0.03em;
+      text-transform: uppercase;
+      color: #9a3412;
+      background: #fff7ed;
+      border: 1px solid #fdba74;
+      white-space: nowrap;
+    }
+
+    .calendar-outlook {
+      margin-top: 0.75rem;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 0.6rem;
+    }
+
+    .outlook-card {
+      border: 1px solid #ecd8bf;
+      border-radius: 10px;
+      background: rgba(255, 255, 255, 0.72);
+      padding: 0.5rem 0.58rem;
+    }
+
+    .outlook-label {
+      font-size: 0.72rem;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+      color: #7c6750;
+      font-weight: 800;
+    }
+
+    .outlook-value {
+      margin-top: 0.2rem;
+      font-size: 0.95rem;
+      font-weight: 800;
+      color: #4b3c2f;
+    }
+
+    .outlook-meta {
+      margin-top: 0.18rem;
+      font-size: 0.75rem;
+      color: #7a6b5f;
+    }
+
+    .calendar-table {
+      margin-top: 0.9rem;
+      border: 1px solid #ecd8bf;
+      border-radius: 12px;
+      overflow: hidden;
+      background: rgba(255, 255, 255, 0.78);
+    }
+
+    .calendar-row {
+      display: grid;
+      grid-template-columns: minmax(105px, 130px) 1fr minmax(70px, 90px) minmax(90px, 120px) minmax(90px, 120px) minmax(75px, 90px);
+      gap: 0.6rem;
+      align-items: center;
+      padding: 0.62rem 0.7rem;
+      border-top: 1px solid #f2e2cb;
+    }
+
+    .calendar-row:first-child {
+      border-top: 0;
+      background: #fff8ed;
+      font-size: 0.72rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+      color: #7a6047;
+    }
+
+    .calendar-time {
+      font-size: 0.78rem;
+      font-weight: 700;
+      color: #624f3e;
+      line-height: 1.25;
+      white-space: pre-line;
+    }
+
+    .calendar-event a {
+      color: #0f766e;
+      text-decoration: none;
+      text-underline-offset: 3px;
+      font-weight: 700;
+      font-size: 0.84rem;
+      line-height: 1.35;
+    }
+
+    .calendar-event a:hover {
+      text-decoration: underline;
+    }
+
+    .event-source {
+      margin-top: 0.16rem;
+      font-size: 0.73rem;
+      color: #8a7c70;
+    }
+
+    .calendar-value {
+      font-size: 0.76rem;
+      font-weight: 700;
+      color: #5f5244;
+      line-height: 1.25;
+      word-break: break-word;
+    }
+
+    .calendar-chip {
+      font-size: 0.72rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.02em;
+      border-radius: 999px;
+      padding: 0.2rem 0.44rem;
+      width: fit-content;
+      border: 1px solid transparent;
+    }
+
+    .chip-high {
+      color: #9f1239;
+      background: #ffe4e6;
+      border-color: #fda4af;
+    }
+
+    .chip-medium {
+      color: #9a3412;
+      background: #ffedd5;
+      border-color: #fdba74;
+    }
+
+    .chip-low {
+      color: #166534;
+      background: #dcfce7;
+      border-color: #86efac;
+    }
+
+    .chip-good {
+      color: #166534;
+      background: #dcfce7;
+      border-color: #86efac;
+    }
+
+    .chip-neutral {
+      color: #9a3412;
+      background: #ffedd5;
+      border-color: #fdba74;
+    }
+
+    .chip-bad {
+      color: #9f1239;
+      background: #ffe4e6;
+      border-color: #fda4af;
+    }
+
+    .outlook-good {
+      color: #166534;
+    }
+
+    .outlook-neutral {
+      color: #9a3412;
+    }
+
+    .outlook-bad {
+      color: #9f1239;
+    }
+
+    .calendar-meta {
+      margin-top: 0.68rem;
+      color: var(--muted);
+      font-size: 0.82rem;
+      font-weight: 600;
+    }
+
     .chart-card {
       background: linear-gradient(150deg, #fffdf9, #fff8ef);
       border: 1px solid var(--border);
@@ -386,7 +592,8 @@
 
     .controls,
     .info-card,
-    .chart-card {
+    .chart-card,
+    .calendar-section {
       animation: riseIn 380ms ease both;
     }
 
@@ -413,6 +620,15 @@
 
       .chart-box {
         height: 260px;
+      }
+
+      .calendar-row {
+        grid-template-columns: 1fr;
+        gap: 0.32rem;
+      }
+
+      .calendar-row:first-child {
+        display: none;
       }
     }
   </style>
@@ -516,6 +732,30 @@
         <div id="trumpFeedMeta" class="metric-meta">Menunggu data</div>
       </article>
     </section>
+
+    <section class="calendar-section" aria-label="Kalender investasi tujuh hari">
+      <div class="calendar-top">
+        <div>
+          <h2>Kalender Event Crypto 7 Hari</h2>
+          <p class="calendar-sub">Kalender investasi berbasis jadwal event macro/market, bukan artikel berita.</p>
+        </div>
+        <div id="calendarEventCount" class="calendar-count">Loading...</div>
+      </div>
+      <div class="calendar-outlook">
+        <div class="outlook-card">
+          <div class="outlook-label">Prediksi Crypto</div>
+          <div id="cryptoOutlookValue" class="outlook-value">Loading...</div>
+          <div id="cryptoOutlookMeta" class="outlook-meta">Menunggu data event</div>
+        </div>
+        <div class="outlook-card">
+          <div class="outlook-label">Prediksi Saham</div>
+          <div id="stocksOutlookValue" class="outlook-value">Loading...</div>
+          <div id="stocksOutlookMeta" class="outlook-meta">Menunggu data event</div>
+        </div>
+      </div>
+      <div id="investmentCalendarList" class="calendar-table"></div>
+      <div id="investmentCalendarMeta" class="calendar-meta">Menunggu data</div>
+    </section>
   </main>
 
   <script>
@@ -523,6 +763,7 @@
     const REFRESH_MS = 15_000;
     const MARKET_INFO_REFRESH_MS = 60_000;
     const FEED_REFRESH_MS = 90_000;
+    const CALENDAR_REFRESH_MS = 180_000;
     const RSS2JSON_BASE = "https://api.rss2json.com/v1/api.json";
     const BASE_PAGE_TITLE = "Binance Multi Chart Static";
 
@@ -545,9 +786,22 @@
     const cryptoNewsMetaElement = document.getElementById("cryptoNewsMeta");
     const trumpFeedListElement = document.getElementById("trumpFeedList");
     const trumpFeedMetaElement = document.getElementById("trumpFeedMeta");
+    const calendarEventCountElement = document.getElementById("calendarEventCount");
+    const cryptoOutlookValueElement = document.getElementById("cryptoOutlookValue");
+    const cryptoOutlookMetaElement = document.getElementById("cryptoOutlookMeta");
+    const stocksOutlookValueElement = document.getElementById("stocksOutlookValue");
+    const stocksOutlookMetaElement = document.getElementById("stocksOutlookMeta");
+    const investmentCalendarListElement = document.getElementById("investmentCalendarList");
+    const investmentCalendarMetaElement = document.getElementById("investmentCalendarMeta");
 
     const activeCharts = new Map();
     let dominanceSlices = [];
+    const marketSnapshot = {
+      fearGreed: null,
+      btcDominance: null,
+      sectorAvg: null,
+      newsBias: null,
+    };
 
     function setStatus(message, isError = false) {
       statusElement.textContent = message;
@@ -639,6 +893,30 @@
       throw new Error(lastError);
     }
 
+    async function fetchTextWithFallback(urls) {
+      let lastError = "Unknown error";
+
+      for (const url of urls) {
+        let timeoutId;
+        try {
+          const controller = new AbortController();
+          timeoutId = setTimeout(() => controller.abort(), 12_000);
+          const response = await fetch(url, { signal: controller.signal });
+          if (!response.ok) {
+            const text = await response.text();
+            throw new Error(`HTTP ${response.status}: ${text}`);
+          }
+          return await response.text();
+        } catch (error) {
+          lastError = error.message;
+        } finally {
+          clearTimeout(timeoutId);
+        }
+      }
+
+      throw new Error(lastError);
+    }
+
     function toBinanceSymbol(value) {
       return value.trim().toUpperCase().replace(/[^A-Z0-9]/g, "");
     }
@@ -694,9 +972,11 @@
         const current = data && data.data && data.data[0];
         if (!current) throw new Error("Data Fear & Greed kosong");
 
+        marketSnapshot.fearGreed = Number(current.value);
         fearGreedValueElement.textContent = `${current.value} - ${current.value_classification}`;
         fearGreedMetaElement.textContent = `Update: ${formatLocalTimeFromUnix(Number(current.timestamp))}`;
       } catch (error) {
+        marketSnapshot.fearGreed = null;
         fearGreedValueElement.textContent = "N/A";
         fearGreedMetaElement.textContent = `Gagal: ${error.message}`;
       }
@@ -724,6 +1004,7 @@
         }
 
         if (!Number.isFinite(btc)) throw new Error("Data dominance tidak tersedia");
+        marketSnapshot.btcDominance = btc;
 
         const othersPie = Math.max(0, 100 - btc);
         const dominanceColors = {
@@ -770,6 +1051,7 @@
         const totalCapText = typeof totalUsd === "number" ? `Total cap: $${Math.round(totalUsd).toLocaleString("en-US")}` : "Total cap: -";
         btcDomMetaElement.textContent = `${totalCapText} | Others: ${othersPie.toFixed(2)}% | Source: ${sourceName} | Update: ${new Date().toLocaleTimeString("id-ID")}`;
       } catch (error) {
+        marketSnapshot.btcDominance = null;
         dominancePieElement.style.background = "conic-gradient(#ef4444 0 100%)";
         dominancePieLabelElement.textContent = "N/A";
         dominanceSlices = [];
@@ -801,6 +1083,273 @@
       return values.reduce((sum, value) => sum + value, 0) / values.length;
     }
 
+    function clamp(value, min, max) {
+      return Math.min(max, Math.max(min, value));
+    }
+
+    function scoreLabel(score) {
+      if (score >= 60) return "Good";
+      if (score <= 40) return "Bad";
+      return "Neutral";
+    }
+
+    function scoreClass(label) {
+      if (label === "Good") return "good";
+      if (label === "Bad") return "bad";
+      return "neutral";
+    }
+
+    function impactClass(label) {
+      if (label === "High") return "high";
+      if (label === "Medium") return "medium";
+      return "low";
+    }
+
+    function scoreTextSentiment(text) {
+      const source = String(text || "").toLowerCase();
+      const positiveWords = [
+        "approval", "approved", "etf", "upgrade", "mainnet", "listing", "partnership",
+        "adoption", "rally", "surge", "bull", "buy", "recovery", "record", "breakout"
+      ];
+      const negativeWords = [
+        "hack", "lawsuit", "ban", "exploit", "liquidation", "delist",
+        "fraud", "sell-off", "bear", "dump", "attack", "collapse", "risk", "crash"
+      ];
+      let score = 0;
+      for (const word of positiveWords) {
+        if (source.includes(word)) score += 1;
+      }
+      for (const word of negativeWords) {
+        if (source.includes(word)) score -= 1;
+      }
+      return clamp(score, -3, 3);
+    }
+
+    function formatCalendarDate(date) {
+      return date.toLocaleDateString("id-ID", {
+        weekday: "short",
+        day: "2-digit",
+        month: "short",
+      });
+    }
+
+    function formatRangeDate(date) {
+      return date.toLocaleDateString("id-ID", {
+        day: "2-digit",
+        month: "short",
+        year: "numeric",
+      });
+    }
+
+    function parseItemDate(item) {
+      const rawDate = item && (item.pubDate || item.published || item.date);
+      const parsed = new Date(rawDate || "");
+      if (Number.isNaN(parsed.getTime())) return null;
+      return parsed;
+    }
+
+    function parseJsonArrayFromText(text) {
+      if (typeof text !== "string") return [];
+      const start = text.indexOf("[");
+      const end = text.lastIndexOf("]");
+      if (start === -1 || end === -1 || end <= start) return [];
+      const slice = text.slice(start, end + 1);
+      try {
+        const parsed = JSON.parse(slice);
+        return Array.isArray(parsed) ? parsed : [];
+      } catch (error) {
+        return [];
+      }
+    }
+
+    function labelFromScore(score) {
+      if (score >= 8) return "Good";
+      if (score <= -8) return "Bad";
+      return "Neutral";
+    }
+
+    function classFromLabel(label) {
+      if (label === "Good") return "outlook-good";
+      if (label === "Bad") return "outlook-bad";
+      return "outlook-neutral";
+    }
+
+    function detectEventImpact(title) {
+      const text = String(title || "").toLowerCase();
+      const high = [
+        "etf", "sec", "cpi", "fomc", "interest rate", "rate decision", "powell",
+        "non-farm", "nfp", "unemployment", "pce", "hack", "exploit", "lawsuit",
+        "liquidation", "bankrupt", "listing"
+      ];
+      const medium = ["gdp", "pmi", "retail sales", "upgrade", "mainnet", "testnet", "partnership", "token unlock", "airdrop", "launch"];
+
+      if (high.some((keyword) => text.includes(keyword))) return "High";
+      if (medium.some((keyword) => text.includes(keyword))) return "Medium";
+      return "Low";
+    }
+
+    function impactWeight(impact) {
+      if (impact === "High") return 3;
+      if (impact === "Medium") return 2;
+      return 1;
+    }
+
+    function eventSentimentUnit(title) {
+      const text = String(title || "").toLowerCase();
+      const negative = ["rate hike", "higher rates", "hot inflation", "war", "bankrupt", "liquidation", "hack", "exploit", "lawsuit", "ban", "recession"];
+      const positive = ["rate cut", "cooling inflation", "soft landing", "etf approval", "approval", "stimulus", "recovery", "bull", "adoption"];
+      if (negative.some((k) => text.includes(k))) return -1;
+      if (positive.some((k) => text.includes(k))) return 1;
+      return 0;
+    }
+
+    function parseNumericValue(rawValue) {
+      const raw = String(rawValue || "").trim();
+      if (!raw || raw === "-" || raw.toLowerCase() === "n/a") return null;
+      const compact = raw.replace(/,/g, "").toUpperCase();
+      const match = compact.match(/-?\d+(\.\d+)?/);
+      if (!match) return null;
+      let value = Number(match[0]);
+      if (!Number.isFinite(value)) return null;
+      if (compact.includes("K")) value *= 1_000;
+      if (compact.includes("M")) value *= 1_000_000;
+      if (compact.includes("B")) value *= 1_000_000_000;
+      return value;
+    }
+
+    function surpriseDirectionFromActual(event) {
+      const actual = parseNumericValue(event.actual);
+      const forecast = parseNumericValue(event.prediction);
+      if (!Number.isFinite(actual) || !Number.isFinite(forecast)) return null;
+
+      const delta = actual - forecast;
+      const tolerance = Math.max(1e-9, Math.abs(forecast) * 0.02);
+      if (Math.abs(delta) <= tolerance) return 0;
+
+      const title = String(event.title || "").toLowerCase();
+      const lowerBetter = ["cpi", "pce", "inflation", "interest rate", "rate decision", "unemployment", "jobless"];
+      const higherBetter = ["gdp", "retail sales", "employment", "non-farm", "nfp", "payroll", "pmi"];
+
+      const sign = delta > 0 ? 1 : -1;
+      if (lowerBetter.some((key) => title.includes(key))) return -sign;
+      if (higherBetter.some((key) => title.includes(key))) return sign;
+      return sign;
+    }
+
+    function scoreForCrypto(event) {
+      const text = String(event.title || "").toLowerCase();
+      const base = eventSentimentUnit(text);
+      const weight = impactWeight(event.impact);
+      const cryptoPositive = ["etf", "listing", "mainnet", "upgrade", "adoption"];
+      const cryptoNegative = ["sec", "ban", "hack", "exploit", "delist", "lawsuit"];
+      let extra = 0;
+      if (cryptoPositive.some((k) => text.includes(k))) extra += 1;
+      if (cryptoNegative.some((k) => text.includes(k))) extra -= 1;
+      return (base + extra) * weight;
+    }
+
+    function scoreForStocks(event) {
+      const text = String(event.title || "").toLowerCase();
+      const weight = impactWeight(event.impact);
+      let bias = 0;
+      if (text.includes("cpi") || text.includes("pce") || text.includes("inflation")) bias -= 1;
+      if (text.includes("interest rate") || text.includes("rate decision") || text.includes("fomc")) bias -= 1;
+      if (text.includes("gdp") || text.includes("retail sales") || text.includes("employment")) bias += 0.5;
+      bias += eventSentimentUnit(text);
+      return bias * weight;
+    }
+
+    function actualScoreForCrypto(event) {
+      const direction = surpriseDirectionFromActual(event);
+      if (direction === null) return null;
+      const text = String(event.title || "").toLowerCase();
+      const macroBoost = (text.includes("fomc") || text.includes("cpi") || text.includes("pce") || text.includes("interest rate")) ? 1.2 : 1;
+      return direction * impactWeight(event.impact) * macroBoost;
+    }
+
+    function actualScoreForStocks(event) {
+      const direction = surpriseDirectionFromActual(event);
+      if (direction === null) return null;
+      const text = String(event.title || "").toLowerCase();
+      const growthBoost = (text.includes("gdp") || text.includes("employment") || text.includes("retail sales")) ? 1.1 : 1;
+      return direction * impactWeight(event.impact) * growthBoost;
+    }
+
+    function setOutlook(element, metaElement, marketName, score, highImpactCount, actualScore, actualCount) {
+      const label = labelFromScore(score);
+      element.className = `outlook-value ${classFromLabel(label)}`;
+      element.textContent = `${label} (${score.toFixed(1)})`;
+      if (actualCount > 0) {
+        const actualLabel = labelFromScore(actualScore);
+        metaElement.textContent = `${marketName}: ${highImpactCount} high-impact | Actual: ${actualLabel} (${actualScore.toFixed(1)}) dari ${actualCount} event`;
+      } else {
+        metaElement.textContent = `${marketName}: ${highImpactCount} high-impact | Actual: belum tersedia dari sumber data`;
+      }
+    }
+
+    function renderCalendarRows(events) {
+      investmentCalendarListElement.innerHTML = "";
+
+      const header = document.createElement("div");
+      header.className = "calendar-row";
+      header.innerHTML = `
+        <div>Waktu</div>
+        <div>Event</div>
+        <div>Impact</div>
+        <div>Prediction</div>
+        <div>Actual</div>
+        <div>Bias</div>
+      `;
+      investmentCalendarListElement.append(header);
+
+      for (const event of events) {
+        const row = document.createElement("div");
+        row.className = "calendar-row";
+
+        const time = document.createElement("div");
+        time.className = "calendar-time";
+        time.textContent = `${formatCalendarDate(event.date)}\n${event.date.toLocaleTimeString("id-ID", { hour: "2-digit", minute: "2-digit" })}`;
+
+        const eventCell = document.createElement("div");
+        eventCell.className = "calendar-event";
+        const link = document.createElement("a");
+        link.href = event.url;
+        link.target = "_blank";
+        link.rel = "noopener noreferrer";
+        link.textContent = event.title;
+        const source = document.createElement("div");
+        source.className = "event-source";
+        source.textContent = `Source: ${event.source}`;
+        eventCell.append(link, source);
+
+        const impact = document.createElement("div");
+        impact.className = `calendar-chip chip-${impactClass(event.impact)}`;
+        impact.textContent = event.impact;
+
+        const prediction = document.createElement("div");
+        prediction.className = "calendar-value";
+        prediction.textContent = event.prediction || "-";
+
+        const actual = document.createElement("div");
+        actual.className = "calendar-value";
+        const hasActual = event.actual && event.actual !== "-";
+        if (hasActual) {
+          actual.textContent = event.actual;
+        } else if (event.previous && event.previous !== "-") {
+          actual.textContent = `- (prev: ${event.previous})`;
+        } else {
+          actual.textContent = "-";
+        }
+
+        const bias = document.createElement("div");
+        bias.className = `calendar-chip chip-${scoreClass(event.bias)}`;
+        bias.textContent = event.bias;
+
+        row.append(time, eventCell, impact, prediction, actual, bias);
+        investmentCalendarListElement.append(row);
+      }
+    }
+
     async function refreshSectorMomentum() {
       const sectorMap = {
         "Layer 1": ["BTCUSDT", "ETHUSDT", "BNBUSDT", "SOLUSDT", "ADAUSDT"],
@@ -828,6 +1377,7 @@
           .filter((item) => item.avg !== null);
 
         if (!sectors.length) throw new Error("Data sektor tidak tersedia");
+        marketSnapshot.sectorAvg = average(sectors.map((item) => item.avg));
 
         const sorted = [...sectors].sort((a, b) => b.avg - a.avg);
         const hot = sorted.slice(0, 2);
@@ -848,6 +1398,7 @@
           }))
         );
       } catch (error) {
+        marketSnapshot.sectorAvg = null;
         setListItems(hotSectorsListElement, [{ text: `Gagal: ${error.message}` }]);
         setListItems(laggingSectorsListElement, [{ text: `Gagal: ${error.message}` }]);
       }
@@ -919,10 +1470,12 @@
         }
 
         if (items.length === 0) throw new Error("Berita tidak ditemukan");
+        marketSnapshot.newsBias = average(items.map((item) => scoreTextSentiment(item.text)));
 
         setListItems(cryptoNewsListElement, items);
         cryptoNewsMetaElement.textContent = `Update: ${new Date().toLocaleTimeString("id-ID")}`;
       } catch (error) {
+        marketSnapshot.newsBias = null;
         setListItems(cryptoNewsListElement, [{ text: "Gagal memuat crypto news" }]);
         cryptoNewsMetaElement.textContent = `Gagal: ${error.message}`;
       }
@@ -956,18 +1509,140 @@
       }
     }
 
+    async function fetchCalendarEvents() {
+      const teMirrorUrl = "https://r.jina.ai/http://api.tradingeconomics.com/calendar?c=guest:guest&f=json";
+      const ffMirrorUrl = "https://r.jina.ai/http://nfs.faireconomy.media/ff_calendar_thisweek.json";
+
+      const [teText, ffText] = await Promise.all([
+        fetchTextWithFallback([teMirrorUrl]),
+        fetchTextWithFallback([ffMirrorUrl]),
+      ]);
+
+      const teItems = parseJsonArrayFromText(teText);
+      const ffItems = parseJsonArrayFromText(ffText);
+
+      const teMapped = teItems.map((item) => ({
+        title: item && (item.Event || item.Category || "Macro Event"),
+        url: item && item.URL ? item.URL : "https://tradingeconomics.com/calendar",
+        date: new Date(item && item.Date ? item.Date : ""),
+        source: `TE ${item && item.Country ? `(${item.Country})` : ""}`.trim(),
+        impact: detectEventImpact(item && item.Event ? item.Event : item && item.Category ? item.Category : ""),
+        prediction: item && item.Forecast ? String(item.Forecast) : "-",
+        actual: item && item.Actual ? String(item.Actual) : "-",
+        previous: item && item.Previous ? String(item.Previous) : "-",
+      }));
+
+      const ffMapped = ffItems.map((item) => ({
+        title: item && item.title ? item.title : "Macro Event",
+        url: "https://www.forexfactory.com/calendar",
+        date: new Date(item && item.date ? item.date : ""),
+        source: `FF ${item && item.country ? `(${item.country})` : ""}`.trim(),
+        impact: item && item.impact ? item.impact : "Low",
+        prediction: item && item.forecast ? String(item.forecast) : "-",
+        actual: item && item.actual ? String(item.actual) : "-",
+        previous: item && item.previous ? String(item.previous) : "-",
+      }));
+
+      return [...teMapped, ...ffMapped];
+    }
+
+    async function refreshInvestmentCalendar() {
+      try {
+        const events = await fetchCalendarEvents();
+        const now = new Date();
+        const startDate = new Date(now);
+        startDate.setHours(0, 0, 0, 0);
+        const endDate = new Date(startDate);
+        endDate.setDate(startDate.getDate() + 7);
+        endDate.setHours(23, 59, 59, 999);
+
+        const filtered = events
+          .filter((item) => item.date instanceof Date && !Number.isNaN(item.date.getTime()))
+          .filter((item) => item.date >= startDate && item.date <= endDate)
+          .sort((a, b) => a.date - b.date);
+
+        const deduped = [];
+        const seen = new Set();
+        for (const event of filtered) {
+          const key = `${event.title.toLowerCase().slice(0, 90)}|${event.date.toISOString().slice(0, 10)}`;
+          if (seen.has(key)) continue;
+          seen.add(key);
+          const score = scoreTextSentiment(event.title);
+          deduped.push({
+            ...event,
+            bias: scoreLabel(50 + score * 16),
+          });
+        }
+
+        const finalEvents = deduped.slice(0, 18);
+        if (!finalEvents.length) {
+          throw new Error("Belum ada event valid untuk 7 hari ke depan");
+        }
+
+        renderCalendarRows(finalEvents);
+        const highImpactCount = finalEvents.filter((item) => item.impact === "High").length;
+        const cryptoScore = finalEvents.reduce((sum, event) => sum + scoreForCrypto(event), 0);
+        const stocksScore = finalEvents.reduce((sum, event) => sum + scoreForStocks(event), 0);
+        const cryptoActualScores = finalEvents
+          .map((event) => actualScoreForCrypto(event))
+          .filter((value) => Number.isFinite(value));
+        const stocksActualScores = finalEvents
+          .map((event) => actualScoreForStocks(event))
+          .filter((value) => Number.isFinite(value));
+        const cryptoActualScore = cryptoActualScores.reduce((sum, value) => sum + value, 0);
+        const stocksActualScore = stocksActualScores.reduce((sum, value) => sum + value, 0);
+        const rangeLabel = `${formatRangeDate(startDate)} - ${formatRangeDate(endDate)}`;
+        calendarEventCountElement.textContent = `${finalEvents.length} Event | High Impact: ${highImpactCount} | ${rangeLabel}`;
+        setOutlook(
+          cryptoOutlookValueElement,
+          cryptoOutlookMetaElement,
+          "Crypto",
+          cryptoScore,
+          highImpactCount,
+          cryptoActualScore,
+          cryptoActualScores.length
+        );
+        setOutlook(
+          stocksOutlookValueElement,
+          stocksOutlookMetaElement,
+          "Saham",
+          stocksScore,
+          highImpactCount,
+          stocksActualScore,
+          stocksActualScores.length
+        );
+        investmentCalendarMetaElement.textContent = `Update: ${new Date().toLocaleTimeString("id-ID")} | Sumber: TradingEconomics + ForexFactory (event schedule)`;
+      } catch (error) {
+        calendarEventCountElement.textContent = "0 Event";
+        cryptoOutlookValueElement.className = "outlook-value outlook-neutral";
+        cryptoOutlookValueElement.textContent = "N/A";
+        cryptoOutlookMetaElement.textContent = "Prediksi crypto belum tersedia";
+        stocksOutlookValueElement.className = "outlook-value outlook-neutral";
+        stocksOutlookValueElement.textContent = "N/A";
+        stocksOutlookMetaElement.textContent = "Prediksi saham belum tersedia";
+        investmentCalendarListElement.innerHTML = "";
+        const row = document.createElement("div");
+        row.className = "calendar-row";
+        row.textContent = `Gagal memuat kalender: ${error.message}`;
+        investmentCalendarListElement.append(row);
+        investmentCalendarMetaElement.textContent = `Gagal: ${error.message}`;
+      }
+    }
+
     function startInfoPanels() {
       refreshFearGreed();
       refreshBtcDominance();
       refreshSectorMomentum();
       refreshCryptoNews();
       refreshTrumpFeed();
+      refreshInvestmentCalendar();
 
       setInterval(refreshFearGreed, MARKET_INFO_REFRESH_MS);
       setInterval(refreshBtcDominance, MARKET_INFO_REFRESH_MS);
       setInterval(refreshSectorMomentum, MARKET_INFO_REFRESH_MS);
       setInterval(refreshCryptoNews, FEED_REFRESH_MS);
       setInterval(refreshTrumpFeed, FEED_REFRESH_MS);
+      setInterval(refreshInvestmentCalendar, CALENDAR_REFRESH_MS);
     }
 
     function buildSeries(chart, type) {
@@ -1237,8 +1912,8 @@
       dominancePieTooltipElement.hidden = true;
     });
 
-    createChartCard({ symbol: "BTCUSDT", interval: "1m", type: "candlestick", limit: 200 });
-    createChartCard({ symbol: "ETHUSDT", interval: "5m", type: "candlestick", limit: 200 });
+    createChartCard({ symbol: "BTCUSDT", interval: "15m", type: "candlestick", limit: 200 });
+    createChartCard({ symbol: "ZECUSDT", interval: "15m", type: "candlestick", limit: 200 });
     for (const id of activeCharts.keys()) {
       startAutoRefresh(id);
     }
